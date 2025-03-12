@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessages([]);
-    const res = await fetch("http://localhost:51730/api/auth/login", {
+    const res = await fetch("http://localhost:5173/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

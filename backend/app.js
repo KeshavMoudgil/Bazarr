@@ -13,7 +13,7 @@ const authRouter = require('./routers/authRouter');
 const customerRouter = require('./routers/customerRouter');
 const { isLoggedIn, isSeller, isCustomer } = require('./middleware/auth');
 const MONGO_DB_URL =
-  `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.xpg4d.mongodb.net/${process.env.MONGO_DB_DATABASE}`;
+  `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.xpg4d.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority&appName=Cluster0`;
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
